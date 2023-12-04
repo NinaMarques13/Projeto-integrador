@@ -1,7 +1,7 @@
 <?php
         session_start();
         if (!isset($_SESSION['login'])) {
-            header('location: login.php');
+            header('location:login.php');
             echo "pare de tentar burlar o site";
         } else {
             include_once "conexao.php";
@@ -11,11 +11,12 @@
             $row = $consultar->fetch();
         }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>BaraBara</title>
+    <meta charset = "UTF-8">
+
     <style>
         body {
             background-color: black;
@@ -61,10 +62,7 @@
             padding: 10px;
         }
 
-
     </style>
-        <meta charset = "UTF-8">
-
 </head>
 <body>
     <header>
@@ -73,12 +71,12 @@
 
     <nav>
         <ul>
-            <?php echo "Olá $row[nm_usuario]";?>
-            <a href="sobrenospos.html">Sobre Nós</a>
-            <a href="contatopos.html">Contato</a>
-            <a href="sair.php">Sair</a>
-            <a href="publicacoes.php">Publicar Ou Conferir Causas</a>
-            <a href="config_usuario.php">Configurações De Usuario</a>
+            <?php echo "Olá $row[nm_usuario]"; ?>
+            <a href="barabaraposlogin.php">Página Inicial</a>
+            <a href="meusposts.php">Acessar Meus Posts</a>
+            <a href="editarcad.php">Configurações De Usuário</a>
+            <a href="minhasdoacoes.php">Minhas Doações</a>
+
         </ul>
     </nav>
 
